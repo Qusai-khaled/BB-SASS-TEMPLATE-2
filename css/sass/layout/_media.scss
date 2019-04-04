@@ -1,0 +1,78 @@
+
+@include Sm{
+    %w-f{
+        width: 100%;
+        float: none;
+    }
+    header{
+        position: static;
+        text-align: center;
+        
+        ul{
+            display: block;
+        }
+    }
+    
+        %h2{
+            font-size: 1.5rem;
+        }
+    %pad-cen{
+        padding: 3rem 0;
+    }
+    .service{
+        .items{
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+    .images{
+        grid-template-columns: repeat(2,1fr);}
+
+    }
+@include Md{
+    
+}
+@include Lg{
+    
+}
+
+
+@include Xs{
+    .service{
+        .items{
+            grid-template-columns:1fr;
+            h3{
+                    font-size: 15px;
+            }
+            p{
+                    font-size: 14px;
+            }
+        }
+        
+    }
+    .images{
+        grid-template-columns: 1fr;}
+    .home{
+        .info{
+            
+            p{
+                
+            }
+        }
+    }
+    %h2{
+            font-size: 20px;
+        }
+    %p{
+        font-size: 11px;
+    letter-spacing: 1.5px;
+    line-height: 1;
+    }
+    %button{
+        padding: 7px 10px;
+    }
+    .footer{
+        p{
+            font-size: 13px;
+        }
+    }
+}

@@ -1,0 +1,27 @@
+.footer{
+     @extend %pad-cen;
+    h2{
+        @extend %h2;
+        color: $subColor;
+    }
+    > span{
+        @extend %span;
+    }
+    .cont{
+        display: flex;
+        justify-content:  center;
+        > div{
+            margin: 1rem 1.5rem;
+            i{
+                padding: 1rem 0;
+            display: block;
+        }   
+            &:last-child{
+                span{
+                    color: $mainColor;
+                }
+            }
+        }
+        
+    }
+}

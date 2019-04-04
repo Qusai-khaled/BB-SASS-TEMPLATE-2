@@ -1,0 +1,147 @@
+//START HOME
+.home{
+    background-color: rgba(black,0.2);
+    background-image: url(../image/home.jpg);
+    height: 100vh;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+    text-align: center;
+    position: relative;
+    .info{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        h2{
+            @extend %h2;
+        }
+        span{
+            @extend %span;
+        }
+        p{
+            @extend %p;
+    }
+        button{
+            @extend %button;
+        }
+    }}
+//END HOME
+
+//START NEED
+.need{
+    background-color: $mainColor;
+    @extend %pad-cen;
+    h2{
+            @extend %h2;
+        }
+        span{
+            @extend %span;
+            background-color: white;
+        }
+        p{
+            @extend %p;
+    }
+        button{
+            @extend %button;
+            background-color: white;
+            color: $subColor;
+            &:hover{
+                background-color: $subColor;
+                color: white;
+            }
+        }
+}
+//END NEED
+
+//START SERVICE
+
+.service{
+     @extend %pad-cen;
+    background-color: white;
+    h2{
+            @extend %h2;
+        color:  $subColor;
+        }
+        span{
+            @extend %span;
+            
+        }
+    .items{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-gap: 15px;
+        margin: 2.5rem 0;
+        .item{
+            i{
+            color: $mainColor;
+        }
+            h3{
+                margin: 1rem 0;
+                color: #333;
+            }
+            p{
+                color: #a4a4a4;
+            }
+        }
+    }
+}
+//END SERVIEC
+
+
+
+//START IMAGES
+.images{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    font-size: 0;
+    > div{
+        position: relative;
+        
+        img{
+            width: 100%;
+            height: 300px;
+        }
+        &:after{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba($mainColor , 0.7);
+            opacity: 0;
+            @include Trans;
+        }
+        &:hover 
+        {
+            &:after{
+            opacity: 1;
+        }
+        }
+    }
+}
+//END IMAGES
+
+//START download
+.download{
+     @extend %pad-cen;
+    background-color: $subColor;
+    h2{
+        @extend %h2;
+        margin-bottom: 1.5rem;
+    }
+    button{
+        
+        @extend %button;
+        background-color: #fff;
+        color: $subColor;
+        &:hover{
+        background-color: $mainColor;
+            color: #fff;
+    }
+        
+    }
+}
+//END download

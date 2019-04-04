@@ -1,0 +1,15 @@
+%button{
+    background: $mainColor;
+            color: white;
+            text-transform: uppercase;
+            padding: 10px 20px;
+            border-radius: 15px;
+            cursor: pointer;
+            border: 0;
+            font-weight:bold;
+            @include Trans;
+            &:hover{
+                background: #fff;
+                color: $mainColor;
+            }
+}

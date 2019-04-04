@@ -1,0 +1,36 @@
+header{background-color: $subColor;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999999999;
+    
+    overflow: hidden;
+    .logo{
+        @extend %w-f;
+        padding: 10px;
+        h2{
+            padding: 10px 0;
+            color: #c9c5bd;
+        }
+    }
+    ul{
+        padding: 10px 0;
+        @extend %w-f;
+        display: flex;
+        list-style: none;
+        li{
+            padding: 10px 15px;
+            
+            a{
+                color: #c9c5bd;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-weight: bold;
+                @include Trans;
+                &:hover{
+                    color: $mainColor;
+                }
+            }
+        }
+    }
+}
